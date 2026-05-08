@@ -1,0 +1,42 @@
+:root {
+  /* Premium Red & Blue Palette */
+  --brand-blue: oklch(0.4 0.18 255);
+  --brand-red: oklch(0.55 0.22 25);
+  --brand-blue-light: oklch(0.6 0.2 255);
+  --brand-red-light: oklch(0.65 0.2 25);
+}
+
+.dark {
+  --primary: oklch(0.65 0.15 255);
+  --secondary: oklch(0.6 0.2 25);
+}
+
+:root:not(.dark) {
+  --primary: oklch(0.45 0.18 255);
+  --secondary: oklch(0.55 0.22 25);
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(135deg, var(--brand-blue) 0%, oklch(0.2 0.15 260) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--brand-blue), var(--brand-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px oklch(0 0 0 / 0.15);
+}
+
+.glass-panel {
+  background: oklch(var(--card) / 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid oklch(var(--border) / 0.5);
+}
